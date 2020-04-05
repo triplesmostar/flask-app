@@ -16,12 +16,12 @@ class ModelsMixin:
             raise FlaskProjectLogException(Status(-101, str(e)))
 
     def add(self):
-        self.created_at = datetime.datetime.utcnow()
+        self.created_at = datetime.datetime.now()
         self.updated_at = self.created_at
         db.session.add(self)
 
     def update(self):
-        self.updated_at = datetime.datetime.utcnow()
+        self.updated_at = datetime.datetime.now()
         db.session.add(self)
 
     def delete(self):

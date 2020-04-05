@@ -13,25 +13,23 @@ def allow_access(function):
     """
     @wraps(function)
     def decorated_function(*args, **kwargs):
-
         """
         allow_access route that requires a valid permission
-
-        :param function: function parameter
-        :return: decorated_functon
-
+        :param args:
+        :param kwargs:
+        :return: Decorated function
         """
 
         try:
             token = request.headers.environ['HTTP_AUTHORIZATION']
             ##Ovdje ide programski kod za validaciju jwt
-            return function(*args, **kwargs)
 
-        except Exception:
+        except Exception as e:
             return jsonify(stattus=Status.status_token_required().__dict__)
 
-    return decorated_function
+        return function(*args, **kwargs)
 
+    return decorated_function
 
 
 

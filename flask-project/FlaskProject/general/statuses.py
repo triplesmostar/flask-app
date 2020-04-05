@@ -18,6 +18,20 @@ class Status:
         return cls(200, 'You have successfully accessed the route')
 
     @classmethod
+    def status_successfully_inserted(cls):
+        """
+        :return: cls(200, 'Successfully inserted')
+        """
+        return cls(200, 'Successfully inserted')
+
+    @classmethod
+    def status_update_success(cls):
+        """
+        :return: cls(200, 'Successfully updated')
+        """
+        return cls(200, 'Successfully updated')
+
+    @classmethod
     def status_successfully_processed(cls):
         """
         :return: cls(200, 'Successfully processed')
@@ -37,6 +51,20 @@ class Status:
         :return: cls(-1, 'Token required')
         """
         return cls(-1, 'Token required')
+
+    @classmethod
+    def status_test_category_already_exist(cls):
+        """
+        :return: cls(-1, 'This category already exist')
+        """
+        return cls(-1, 'This category already exist')
+
+    @classmethod
+    def status_test_category_not_exist(cls):
+        """
+        :return: cls(-1, 'This category does not exist')
+        """
+        return cls(-1, 'This category does not exist')
 
     def repr_print(self):
         return {

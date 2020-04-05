@@ -1,0 +1,1 @@
+from .test_category_schema import TestCategorySchema
