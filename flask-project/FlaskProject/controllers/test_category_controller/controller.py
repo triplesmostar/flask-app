@@ -24,7 +24,7 @@ class TestCategoryController(BaseController):
         self.test_category.add()
         self.test_category.commit_or_rollback()
 
-        return Status.status_successfully_processed()
+        return Status.status_successfully_inserted().__dict__
 
     def alter(self):
         """
@@ -49,7 +49,7 @@ class TestCategoryController(BaseController):
 
         self.test_category = test_category
 
-        return Status.status_update_success()
+        return Status.status_update_success().__dict__
 
     def inactivate(self):
         """
@@ -69,7 +69,7 @@ class TestCategoryController(BaseController):
 
         self.test_category = test_category
 
-        return Status.status_successfully_processed()
+        return Status.status_successfully_processed().__dict__
 
     def activate(self):
         """
@@ -94,7 +94,7 @@ class TestCategoryController(BaseController):
 
         self.test_category = test_category
 
-        return Status.status_successfully_processed()
+        return Status.status_successfully_processed().__dict__
 
     @classmethod
     def get_one(cls, identifier):
