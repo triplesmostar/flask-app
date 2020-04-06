@@ -1,8 +1,7 @@
 import unittest
 from faker import Faker
 
-from FlaskProject import create_app, db, TestFilm, FlaskProjectLogException, \
-    TestCategory
+from FlaskProject import create_app, db, TestFilm, TestCategory
 from FlaskProject.general import Status
 
 from FlaskProject.controllers.test_film_controller.controller import \
@@ -11,12 +10,12 @@ from FlaskProject.controllers.test_film_controller.controller import \
 
 class TestTestCategoryController(unittest.TestCase):
     """
-    This class is for testing TestCategoryController
+    This class is for testing TestFilmController
     """
 
     def setUp(self):
         """
-        Method for setUp TestCategoryController test module
+        Method for setUp TestFilmController test module
         :return: OK or ERROR
         """
         self.app = create_app('development')
