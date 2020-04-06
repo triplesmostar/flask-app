@@ -4,7 +4,7 @@
 - [Installation](#installation)
 - [Running](#running)
 	- [Starting dev server](#starting-dev-server)
-	- [Database migration] (#databse-migration)
+	- [Database migration](#database-migration)
 	- [Dependencies maintenance](#dependencies-maintenance)
 	- [Seeding database with fake development data](#seeding-database-with-fake-development-data)
 	- [Application shell](#application-shell)
