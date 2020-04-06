@@ -95,10 +95,7 @@ def test_category_autocomplete():
     request_json = request.get_json()
     search = request_json.get('search', None)
 
-    if not search:
-        data = []
-    else:
-        data = TestCategoryController.list_autocomplete(search)
+    data = TestCategoryController.list_autocomplete(search)
 
     return jsonify(
         data=data,

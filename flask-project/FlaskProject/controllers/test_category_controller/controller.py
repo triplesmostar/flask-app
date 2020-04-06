@@ -125,11 +125,11 @@ class TestCategoryController(BaseController):
         :param search: Data for search
         :return: List of dicts
         """
-        test_category = TestCategory.query.autocomplete_by_name(search)
         list_data = []
-
-        for i in test_category:
-            list_data.append(obj_to_dict(i))
+        if search:
+            test_category = TestCategory.query.autocomplete_by_name(search)
+            for i in test_category:
+                list_data.append(obj_to_dict(i))
 
         return list_data
 

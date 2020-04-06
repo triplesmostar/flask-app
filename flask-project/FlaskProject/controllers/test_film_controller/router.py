@@ -47,10 +47,7 @@ def test_film_autocomplete():
     request_json = request.get_json()
     search = request_json.get('search', None)
 
-    if not search:
-        data = []
-    else:
-        data = TestFilmController.list_autocomplete(search)
+    data = TestFilmController.list_autocomplete(search)
 
     return jsonify(
         data=data,

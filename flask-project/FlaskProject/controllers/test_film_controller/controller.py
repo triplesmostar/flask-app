@@ -59,11 +59,11 @@ class TestFilmController(BaseController):
         :param search:Data for search
         :return: List of dicts
         """
-        test_category = TestFilm.query.autocomplete_by_name(search)
         list_data = []
-
-        for i in test_category:
-            list_data.append(TestFilmController.__custom_sql(i))
+        if search:
+            test_category = TestFilm.query.autocomplete_by_name(search)
+            for i in test_category:
+                list_data.append(TestFilmController.__custom_sql(i))
 
         return list_data
 
