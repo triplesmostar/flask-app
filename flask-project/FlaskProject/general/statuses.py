@@ -66,6 +66,13 @@ class Status:
         """
         return cls(-1, 'This category does not exist')
 
+    @classmethod
+    def status_test_film_not_exist(cls):
+        """
+        :return: cls(-1, 'This film does not exist')
+        """
+        return cls(-1, 'This film does not exist')
+
     def repr_print(self):
         return {
             "errorCode": self.errorCode,

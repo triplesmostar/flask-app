@@ -110,7 +110,7 @@ class TestCategoryController(BaseController):
     def get_one_details(identifier):
         """
         Use this method to get an test category by identifier
-        :param identifier: Extras Category identifier
+        :param identifier: Test Category identifier
         :return: Dict object
         """
         test_category = TestCategory.query.get_one(identifier)
@@ -122,7 +122,7 @@ class TestCategoryController(BaseController):
     def list_autocomplete(search):
         """
         Method for searching categories with autocomplete
-        :param search:Data for search in form of jason
+        :param search: Data for search
         :return: List of dicts
         """
         test_category = TestCategory.query.autocomplete_by_name(search)

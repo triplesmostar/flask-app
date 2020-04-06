@@ -107,10 +107,10 @@ def test_category_autocomplete():
 
 @bpp.route('/testCategory', methods=['GET'])
 @allow_access
-def get_test_categores():
+def get_test_categories():
     start = request.args.get('start', 0, int)
     limit = request.args.get('limit', 20, int)
-    name = request.args.get('name', '', str)
+    name = request.args.get('name', None, str)
 
     pagination_result = TestCategoryController.get_list_pagination(
         start=start, limit=limit, name=name)
