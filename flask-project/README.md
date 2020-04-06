@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Running](#running)
 	- [Starting dev server](#starting-dev-server)
+	- [Database migration] (#databse-migration)
 	- [Dependencies maintenance](#dependencies-maintenance)
 	- [Seeding database with fake development data](#seeding-database-with-fake-development-data)
 	- [Application shell](#application-shell)
@@ -30,6 +31,14 @@ See [INSTALL.md](INSTALL.md)
 ~~~
 source .venv/bin/activate
 python manage.py runserver
+~~~
+
+## Database migration
+
+~~~
+source .venv/bin/activate
+python manage.py db revision "some_message"
+python manage.py db upgrade
 ~~~
 
 ## Dependencies maintenance
