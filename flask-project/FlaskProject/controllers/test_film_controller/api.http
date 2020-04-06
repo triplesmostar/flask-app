@@ -31,6 +31,6 @@ Authorization: {{token}}
 
 ###
 #@name test_film_pagination
-GET http://0.0.0.1:5000/testFilm?start=some_int&limit=some_int&film_name=some_string$category_id=some_string
+GET http://0.0.0.1:5000/testFilm?start=some_int&limit=some_int&film_name=some_string&category_id=some_string
 content-type: application/json
 Authorization: {{token}}
